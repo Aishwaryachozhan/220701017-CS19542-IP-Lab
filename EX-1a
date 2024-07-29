@@ -1,0 +1,183 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - C Aishwarya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="resume">
+        <div>
+        <header>
+            <h1>C AISHWARYA</h1>
+            <p>Passionate Computer Science Engineering Student Pursuing Exciting Software job opportunities</p>
+        </header>
+        
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <h3>Rajalakshmi Engineering College</h3>
+                <p>B.E. Computer Science Engineering</p>
+                <p>Expected Graduation Year: 2026</p>
+                <p>CGPA upto 3rd semester: 8.42</p>
+            </div>
+            <div class="education-entry">
+                <h3>Chennai Higher Secondary School</h3>
+                <p>Higher Secondary (12th grade)</p>
+                <p>Year: 2021-2022</p>
+                <p>Percentage: 87.83%</p>
+            </div>
+            <div class="education-entry">
+                <h3>Secondary (10th grade)</h3>
+                <p>Year: 2019-2020</p>
+                <p>Percentage: 93.2%</p>
+            </div>
+        </section>
+    
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-entry">
+                <h3>Voting Management System</h3>
+                <p>Implemented in PHP and MySQL</p>
+                <p>Interactive user interface</p>
+            </div>
+            <div class="project-entry">
+                <h3>Online Course Portal System Software</h3>
+                <p>Documented requirements,project scope,user stories, and sprint goals of online course portal system software Using Agile Methodology for project documentation.</p>
+            </div>
+        </section>
+        </div>
+        <div>
+        <section class="right">
+            <section class="contact-info">
+                
+                <ul>
+                     <a href="mailto:your.email@example.com">aishwaryachozhan@gmail.com</a>
+                     
+                    <!-- You can add more contact information here -->
+                </ul>
+            </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Java Programming</li>
+                <li>Python Programming</li>
+                <li>SQL Programming</li>
+                <li>C Programming</li>
+                <li>UiPath (Basic proficiency)</li>
+                <li>Excel</li>
+            </ul>
+        </section>
+        
+        <section class="additionals">
+            <h2>Additional Information</h2>
+            <p>Completed the 'Joy of computing using python' course via NPTEL</p>
+            <p>Industrial Visit: NetworkGreek Broadcasting Ideas, Vadapalani, 28/04/2023</p>
+            <p>Attended Robotics Process Automation(RPA) workshop</p>
+            <p>Participated in coding contests and technical seminars</p>
+        </section>
+        
+        <section class="languages">
+            <h2>Languages</h2>
+            <p>English, Tamil</p>
+        </section>
+        
+        <section class="dob">
+            <h2>Date of Birth</h2>
+            <p>13/10/2004</p>
+        </section>
+    </section>
+    </div>
+    </div>
+</body>
+</html>
+
+
+styles.css
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    height:100vh;
+    
+}
+
+.resume {
+   
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(29, 28, 28, 0.1);
+    display:flex;
+    
+    
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+h2 {
+    color: #1ac8e3;
+    font-size: 20px;
+    border-bottom: 1px solid #191616;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #120e0d;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.education-entry,
+.project-entry {
+    margin-bottom: 15px;
+}
+.left {
+    flex: 2; /* Left section takes 2/3 of the available space */
+    padding-right: 20px;
+}
+
+.right {
+    flex: 1; /* Right section takes 1/3 of the available space */
+    padding-left: 20px;
+}
+.contact-info ul{
+    color: #1ac8e3;
+}
+
+.skills ul {
+    position: right;
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 5px;
+}
+
+.languages,
+.dob {
+    position: right;
+    margin-top: 20px;
+}
+
+
