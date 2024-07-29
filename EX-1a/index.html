@@ -1,24 +1,106 @@
-DefaultTableModel table =  (DefaultTableModel)jTable1.getModel();
-        while(table.getRowCount()>0){
-            for(int i=0;i<table.getRowCount();i++){
-                table.removeRow(i);
-            }
-        }
-        try{
-            
-         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/election","root","valli");
-        Statement stmt=con.createStatement();
-       ResultSet rs= stmt.executeQuery("select * from candidate");
-       while(rs.next()){
-                Object[] data ={rs.getString("name"),rs.getInt("id"),rs.getString("department")};
-                table.addRow(data);
-//                System.out.println(rs.getInt("stud_id")+" "+rs.getString("stud_name"));
-            }
-        con.close();
-        
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>DAY</th>
+                    <th>1<br>8:00-9.00</th>
+                    <th>2<br>9:00-9:50</th>
+                    <th>9:50-10:10</th>
+                    <th>3<br>10:10-11:00</th>
+                    <th>4<br>11:00-11:50</th>
+                    <th>5/L<br>11:50-12:30</th>
+                    <th>L/5<br>12:30-1:20</th>
+                    <th>6<br>1:20-2:10</th>
+                    <th>7<br>2:10-3:00</th>
 
-     }catch (Exception e){
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TUESDAY</td>
+                    <td>CS19542 / CS19541 - IP / CN LAB<br>TLFL5 / TLFL3</td>
+                    <td>CS19542 / CS19541 - IP / CN LAB<br>TLFL5 / TLFL3</td>
+                    <td>BREAK</td>
+                    <td>CS19501 - TOC<br>A 309</td>
+                    <td>LUNCH</td>
+                    <td>CS19541 / CS19542 - CN / IP LAB<br>TLFL3 / TLFL5</td>
+                    <td>CS19541 / CS19542 - CN / IP LAB<br>TLFL3 / TLFL5</td>
+                    <td>AI19341 - POAI<br>A 309</td>
+                    <td>CS19542 - IP<br>A 309</td>
+                </tr>
+            </tbody>
+                <tr>
+                    <td>WEDNESDAY</td>
+                    <td>AI19341 / CS19542 - POAI / IP LAB<br>TLGL3 / JL1</td>
+                    <td>AI19341 / CS19542 - POAI / IP LAB<br>TLGL3 / JL1</td>
+                    <td>BREAK</td>
+                    <td>GE19521 - Soft Skills-II</td>
+                    <td>GE19521 - Soft Skills-II</td>
+                    <td>LUNCH</td>
+                    <td>COUN<br>A 309</td>
+                    <td>OAI1903 - RPA<br>TLGL2</td>
+                    <td>OAI1903 - RPA<br>TLGL2</td>
+                    
+                   
+                </tr>
+                <tr>
+                    <td>THURSDAY</td>
+                    <td>CS19542 - IP<br>A 309</td>
+                    <td>CS19541 - CN<br>A 309</td>
+                    <td>BREAK</td>
+                    <td>AI19341 - POAI<br>A 309</td>
+                    <td>LIB</td>
+                    <td>LUNCH</td>
+                    <td>NPTEL<br>A 309</td>
+                    <td>CS19501 - TOC<br>A 309</td>
+                    <td>CS19501 - TOC<br>A 309</td>
+                    
+                    
+                    
+                    
+                </tr>
+                <tr>
+                    <td>FRIDAY</td>
+                    <td>CS19541 - CN<br>A 309</td>
+                    <td>AI19341 - POAI<br>A 309</td>
+                    <td>BREAK</td>
+                    <td>CS19541 / AI19341 - CN / POAI LAB<br>TLFL3 / TLGL3</td>
+                    <td>CS19541 / AI19341 - CN / POAI LAB<br>TLFL3 / TLGL3</td>
+                    <td>LUNCH</td>
+                    <td>CS19541 - CN<br>A 309</td>
+                    <td>CS19542 - IP</td><br>A 309</td>
+                    <td>LIB</td>
+                    
+                </tr>
+                <tr>
+                    <td>SATURDAY</td>
+                    <td>OAI1903 - RPA<br>TLGL2</td>
+                    <td>OAI1903 - RPA<br>TLGL2</td>
+                    <td>BREAK</td>
+                    <td>CS19542 - IP<br>A 309</td>
+                    <td>LUNCH</td>
+                    <td>CS19542 / CS19541 - IP / CN LAB<br>TLFL5 / TLFL3</td>
+                    <td>CS19542 / CS19541 - IP / CN LAB<br>TLFL5 / TLFL3</td>
+                    <td>CS19541 - CN<br>A 309</td>
+                    <td>CS19501 - TOC<br>A 309</td>
+                    
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    
+</body>
+</html>
          
       
 
