@@ -1,0 +1,26 @@
+DefaultTableModel table =  (DefaultTableModel)jTable1.getModel();
+        while(table.getRowCount()>0){
+            for(int i=0;i<table.getRowCount();i++){
+                table.removeRow(i);
+            }
+        }
+        try{
+            
+         Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/election","root","valli");
+        Statement stmt=con.createStatement();
+       ResultSet rs= stmt.executeQuery("select * from candidate");
+       while(rs.next()){
+                Object[] data ={rs.getString("name"),rs.getInt("id"),rs.getString("department")};
+                table.addRow(data);
+//                System.out.println(rs.getInt("stud_id")+" "+rs.getString("stud_name"));
+            }
+        con.close();
+        
+
+     }catch (Exception e){
+         
+      
+
+    
+        }
