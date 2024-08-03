@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <body>
+        <div class="container">
+            <div class="title"><h2>Register Now !</h2></div>
+            <form action="" id="form" class="form" onsubmit="return validateForm()">
+                <div class="regno inputs adjust_width">
+                    <label for="regno">Register No. :</label><br>
+                    <input type="text" id="regno" name="regno"  placeholder="Enter your register number">
+                    <span class="error" id="regno-error"></span>
+                </div>
+                <div class="name inputs adjust_width">
+                    <label for="name">Name :</label><br>
+                    <input type="text" id="name" name="name"  placeholder="Enter your full name">
+                    <span class="error" id="name-error"></span>
+                </div>
+    
+                <div class="email inputs adjust_width">
+                    <label for="email">Email :</label><br>
+                    <input type="text" id="email" name="email"  placeholder="Enter your email">
+                    <span class="error" id="email-error"></span>
+                </div>
+    
+                <div class="contact inputs adjust_width">
+                    <label for="contact">Contact :</label><br>
+                    <input type="tel" id="contact" name="contact"  placeholder="Enter your contact number">
+                    <span class="error" id="contact-error"></span>
+                </div>
+    
+                <div class="one">
+                    <div class="year inputs">
+                        <label for="year">Year :</label>
+                        <select name="year" id="year"   >
+                            <option value="">Select Year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select><br>
+                        <span class="error" id="year-error"></span>
+                    </div>
+    
+                    <div class="dept inputs">
+                        <label for="dept">Department :</label>
+                        <select name="dept" id="dept"  >
+                            <option value="">Select Dept</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EEE">EEE</option>
+                            <option value="CSBS">CSBS</option>
+                            <option value="AIDS">AIDS</option>
+                        </select><br>
+                        <span class="error" id="dept-error"></span>
+                    </div>
+                </div>
+                
+            
+                <div class="one">
+                    <div class="cat inputs">
+                        <label for="cat">Course Category :</label>
+                        <select name="cat" id="cat">
+                            <option value="">Select Category</option>
+                            <option value="Core">Core</option>
+                            <option value="Open Elective">Open Elective</option>
+                            <option value="Professional Elective">Professional Elective</option>
+                        </select><br>
+                        <span class="error" id="cat-error"></span>
+                    </div>
+    
+                    <div class="sem inputs">
+                        <label for="sem">Semester :</label>
+                        <select name="sem" id="sem">
+                            <option value="">Select Sem</option>
+                            <option value="1">1st Sem</option>
+                            <option value="2">2nd Sem</option>
+                            <option value="3">3rd Sem</option>
+                            <option value="4">4th Sem</option>
+                            <option value="5">5th Sem</option>
+                            <option value="6">6th Sem</option>
+                            <option value="7">7th Sem</option>
+                            <option value="8">8th Sem</option>
+                        </select><br>
+                        <span class="error" id="sem-error"></span>
+                    </div>
+                </div>
+                <div class="ccode inputs adjust_width">
+                    <label for="ccode">Course Code :</label><br>
+                    <input type="text" id="ccode" name="ccode"  placeholder="Enter the course code">
+                    <span class="error" id="ccode-error"></span>
+                </div>
+                <div class="cname inputs adjust_width">
+                    <label for="cname">Course Name :</label><br>
+                    <input type="text" id="cname" name="cname"  placeholder="Enter the course name">
+                    <span class="error" id="cname-error"></span>
+                </div>
+    
+                <div class="credit inputs adjust_width">
+                    <label for="credit">Credit :</label><br>
+                    <input type="text" id="credit" name="credit"  placeholder="Enter the credit points">
+                    <span class="error" id="credit-error"></span>
+                </div>
+    
+                <div class="gender inputs">
+                    <label>Gender:</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female" class="gender-label-female rad">Female</label>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male" class="gender-label-male rad">Male</label>
+                    <br>
+                    <span class="error" id="gender-error"></span>
+                </div>
+    
+                <hr><br>
+                <div class="btn">
+                    <input type="submit" form="form" value="Submit" class="applybtn">
+                    <input type = "reset" value = "Clear" class="resetbtn">
+                </div>
+            </form>
+        </div>
+    
+    
+    </body>
+    
+</body>
+</html>
