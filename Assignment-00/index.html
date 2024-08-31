@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Healthy Bites</h1>
+        </div>
+        <div class="contact-info">
+            <img src="logo.jpeg" alt="Call Icon" class="call-icon">
+            <span class="phone-number">+123 456 7890</span>
+        </div>
+        <nav class="navigation-bar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="color-picker-container">
+        <label for="colorPicker">Choose background color:</label>
+        <input type="color" id="colorPicker" title="Pick a background color">
+    </div>
+    
+    
+    <main>
+       
+        <div class="iframe-container">
+            <div class="left-section">
+                <h2>Why Nutrition?</h2>
+                <p>Nutrition is essential for maintaining health and well-being. It provides the energy and nutrients needed for growth, repair, and overall bodily functions. A balanced diet helps prevent diseases and supports a healthy lifestyle.</p>
+            </div>
+            <iframe src="https://en.wikipedia.org/wiki/Nutrition" 
+                    width="600" 
+                    height="400" 
+                    frameborder="0" 
+                    title="Wikipedia Nutrition">
+                Your browser does not support iframes.
+            </iframe>
+            <div class="right-section">
+                <h2>News, Resources, and Events</h2>
+                <ul>
+                    <li><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank">World Health Organization - Healthy Diet</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520897/" target="_blank">NCBI - Importance of Nutrition</a></li>
+                    <li><a href="https://www.eatright.org/health/wellness/preventing-illness/the-importance-of-nutrition" target="_blank">Eat Right - The Importance of Nutrition</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <section>
+            <details>
+                <summary> Importance of Nutrition</summary>
+                <ul>
+                    <li><a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank">World Health Organization - Healthy Diet</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6520897/" target="_blank">NCBI - Importance of Nutrition</a></li>
+                    <li><a href="https://www.eatright.org/health/wellness/preventing-illness/the-importance-of-nutrition" target="_blank">Eat Right - The Importance of Nutrition</a></li>
+                </ul>
+            </details>
+        </section>
+    </main>
+    <footer>
+       
+        <canvas id="rectangleCanvas" width="50" height="20"></canvas>
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="10"  stroke-width="2" fill="red"></circle> 
+        </svg>
+    </footer>
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const colorPicker = document.getElementById('colorPicker');
+            
+            colorPicker.addEventListener('input', function(event) {
+                document.body.style.backgroundColor = event.target.value;
+            });
+
+           
+        });
+    </script>
+    
+</body>
+</html>
