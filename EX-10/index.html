@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple jQuery Game</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: lightblue; 
+}
+
+        .bubble {
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            color: white;
+        }
+        .scoreboard {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+        }
+    </style>
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="scoreboard">Score: <span id="score">0</span></div>
+
+<script>
+$(document).ready(function() {
+    var width = screen.width - 100;
+    var height = screen.height - 200;
+    var score = 0;
+    var activeBubbles = {};
+    var usedLetters = [];
+
+    function updateScore() {
+        $('#score').text(score);
+    }
+
+   
+    $(document).keydown(function(event) {
+        var keyCode = event.which || event.keyCode;
+        var pressedLetter = String.fromCharCode(keyCode);
+
+        
+        if (activeBubbles[pressedLetter]) {
+           
+            activeBubbles[pressedLetter].remove();
+            delete activeBubbles[pressedLetter];
+            score++;
+            updateScore();
+
+            
+            usedLetters.push(pressedLetter);
+        }
+    });
+
+   
+    var bubbleInterval = setInterval(function() {
+     
+        var randomLetter = getRandomUnusedLetter();
+
+        
+        if (!randomLetter) {
+            clearInterval(bubbleInterval);
+            alert('Congratulations! You pressed all letters. Your final score is: ' + score);
+            location.reload(); //
+            return;
+        }
+
+        var randomColor = getRandomColor();
+        var bubble = $('<div class="bubble"></div>').text(randomLetter).css({
+            "background-color": randomColor,
+            "left": getRandomPosition(width) + 'px',
+            "top": getRandomPosition(height) + 'px'
+        });
+
+        $('body').append(bubble);
+        activeBubbles[randomLetter] = bubble;
+
+        var bubbleTimeout = setTimeout(function() {
+            if (activeBubbles[randomLetter]) {
+               
+                clearInterval(bubbleInterval);
+                alert('Game Over! You missed the letter. Your final score is: ' + score);
+                location.reload(); 
+            }
+        }, 3000);
+    }, 1000); 
+
+    function getRandomUnusedLetter() {
+        var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var unusedLetters = alphabet.split('').filter(function(letter) {
+            return !usedLetters.includes(letter);
+        });
+
+        if (unusedLetters.length === 0) {
+            return null; 
+        }
+
+        
+        return unusedLetters[Math.floor(Math.random() * unusedLetters.length)];
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function getRandomPosition(max) {
+        return Math.floor(Math.random() * max);
+    }
+});
+</script>
+
+</body>
+</html>
+
+
+
+
