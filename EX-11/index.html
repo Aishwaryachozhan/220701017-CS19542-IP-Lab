@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Website</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Additional styling */
+    .navbar {
+      background-color: #da0d8c; /* College theme color */
+    }
+    .navbar-brand {
+      color: #fff;
+    }
+    .carousel-inner img {
+  width: 100%;
+  height: 500px /* Ensures the image maintains aspect ratio */
+}
+
+.card {
+      margin: 20px;
+    }
+    footer {
+      background-color: #da0d8c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Rajalakshmi Engineering College</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#events">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="collegeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="picture.jpeg" class="d-block w-100" alt="Campus Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to Our College</h5>
+          <p>Excellence in Education</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="picture1.jpeg" class="d-block w-100" alt="Library Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>State-of-the-art Library</h5>
+          <p>Enhancing Learning and Knowledge</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/1500x500" class="d-block w-100" alt="Students Image">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Empowering Students</h5>
+          <p>Join Us in Creating Future Leaders</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#collegeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#collegeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 text-center">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Our college provides world-class education and facilities to help students achieve their dreams.</p>
+    </div>
+  </section>
+
+  <!-- Events Section with Cards -->
+  <section id="events" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Upcoming Events</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Event 1">
+            <div class="card-body">
+              <h5 class="card-title">Tech Fest 2024</h5>
+              <p class="card-text">Join us for the biggest technology festival of the year.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Event 2">
+            <div class="card-body">
+              <h5 class="card-title">Cultural Fest</h5>
+              <p class="card-text">Experience the vibrant cultural diversity of our college.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Event 3">
+            <div class="card-body">
+              <h5 class="card-title">Sports Day</h5>
+              <p class="card-text">Get ready for an action-packed day of sports and competition.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get in touch with us for any queries or information.</p>
+      <p>Email: contact@college.com | Phone: +1234567890</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4">
+    <p>&copy; 2024 College Name. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
