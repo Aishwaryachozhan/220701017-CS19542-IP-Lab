@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.social-icon img {
+    width: 30pc;
+    margin-right: 10px;
+    /* height: 10px; */
+}
+.carousel-inner img {
+    max-width: 100%; /* Make sure the images are responsive */
+    height: 250%;   /* Set a fixed height for the images */
+    object-fit: cover; /* Optional: Crop the image to fit the container */
+}
+.social-icon {
+    display: inline-block; /* Allows transform to take effect properly */
+    font-size: 10px; /* Set a large size for the layout */
+    transform: scale(0.5); /* Scale down to 50% of the original size */
+    margin: 0 10px; /* Spacing between icons */
+    color: #000; /* Optional: Change color if needed */
+    transition: transform 0.3s; /* Add smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    transform: scale(0.6); /* Slightly enlarge on hover */
+}
+
+
+
