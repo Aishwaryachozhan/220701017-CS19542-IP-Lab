@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Management</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Base styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #282c34;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        /* Labels and select */
+        label {
+            font-size: 1.1rem;
+            color: #ddd;
+            display: block;
+            margin-top: 15px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Scoreboard */
+        .scoreboard {
+            margin-top: 30px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #ffa500;
+            margin-bottom: 10px;
+        }
+
+        #scoreboard {
+            list-style: none;
+        }
+
+        #scoreboard li {
+            padding: 5px;
+            background-color: #444;
+            color: #fff;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Button styling */
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff4d4d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Game Management</h1>
+
+        <label for="difficulty">Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <div class="scoreboard">
+            <h2>Player Scoreboard</h2>
+            <ul id="scoreboard"></ul>
+        </div>
+
+        <button id="resetScore" class="button">Reset Alice's Score</button>
+    </div>
+
+    <script src="management.js"></script>
+</body>
+</html>
+
+
