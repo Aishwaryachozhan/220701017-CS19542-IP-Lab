@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 40%; /* Reduced form container width to 40% */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Label and Input Styles */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+/* Reducing width and height of the form inputs */
+input[type="text"], input[type="date"], input[type="number"] {
+    width: 80%; /* Keeps input width at 80% of the container */
+    padding: 6px; /* Reduces input height (previously 8px) */
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Adjusting font size */
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Table Styles */
+table {
+    width: 80%; /* Reduced table width */
+    margin: 20px auto; /* Centered the table */
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px; /* Reduced padding inside table cells */
+    text-align: left;
+    font-size: 14px; /* Adjusted font size */
+}
