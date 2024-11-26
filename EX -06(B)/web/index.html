@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Name Suggestion</title>
+    <script>
+        // JavaScript function to send an AJAX request for name suggestions
+        function showSuggestions(str) {
+            if (str.length == 0) {
+                document.getElementById("suggestions").innerHTML = "";
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("suggestions").innerHTML = this.responseText;
+                }
+            };
+            xhr.open("GET", "StudentSuggestionServlet?query=" + str, true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <h2>Student Name Suggestion</h2>
+    <form action="">
+        <label for="name">Enter student name: </label>
+        <input type="text" id="name" name="name" onkeyup="showSuggestions(this.value)">
+    </form>
+    <p>Suggestions: <span id="suggestions"></span></p>
+</body>
+</html>
