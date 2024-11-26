@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple jQuery Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .bubble {
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<script>
+$(document).ready(function() {
+    // Adjusted screen width and height to account for browser space
+    var width = screen.width - 100;
+    var height = screen.height - 200;
+
+    // Listen for keypress events
+    $(document).keypress(function(event) {
+        var keyCode = event.which || event.keyCode;
+
+        // Key codes for A-Z are between 65 and 90
+        if (keyCode >= 65 && keyCode <= 90) {
+            var randomLetter = String.fromCharCode(keyCode); // Convert keyCode to character
+
+            // Generate a random color
+            var randomColor = getRandomColor();
+
+            // Create a bubble element
+            var bubble = $('<div class="bubble"></div>').text(randomLetter).css({
+                "background-color": randomColor,
+                "color": "white",
+                "left": getRandomPosition(width) + 'px',
+                "top": getRandomPosition(height) + 'px'
+            });
+
+            // Append bubble to the body
+            $('body').append(bubble);
+
+            // Remove the bubble after 3 seconds
+            setTimeout(function() {
+                bubble.remove();
+            }, 3000);
+        }
+    });
+
+    // Function to generate a random color
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Function to generate a random position within the screen dimensions
+    function getRandomPosition(max) {
+        return Math.floor(Math.random() * max);
+    }
+});
+</script>
+
+</body>
+</html>
+
